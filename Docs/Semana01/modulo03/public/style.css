@@ -1,0 +1,180 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap";
+
+:root {
+  --color-green: #50FA7B;
+  --color-rocket: #7159c1;
+}
+
+/* Material Icons */
+.material-icons.md-14 { font-size: 14px; }
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  background-color: rgb(91, 5, 126);
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+header {
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.links {
+  text-align: center;
+}
+
+.links a {
+  margin-right: 30px;
+  font-size: 18px;
+  line-height: 28px;
+  color: white;
+  text-decoration: none;
+}
+
+.links a:hover {
+  color: var(--color-green);
+  transition: 200ms;
+}
+
+main,
+#wrapper {
+  margin: 30px 0;
+  text-align: center;
+}
+
+#description img {
+  height: 350px;
+  border-radius: 50%;
+  border: 5px solid rgb(124, 0, 240);
+}
+
+#description h1 {
+  font-size: 32px;
+  line-height: 42px;
+  font-weight: bold;
+}
+
+#description h2 {
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: normal;
+}
+
+#description p {
+  max-width: 350px;
+  margin: 20px auto;
+}
+
+#techs {
+  margin: 32px 0;
+  text-align: center;
+}
+
+#techs ul li {
+  margin: 10px 50px;
+  display: inline-block;
+}
+
+footer {
+  text-align: center;
+}
+
+footer .links a {
+  border-bottom: 2px solid var(--color-green);
+}
+
+/* === CONTENTS === */
+
+.cards {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  background-color: var(--color-rocket);
+  cursor: pointer;
+}
+
+.card__image-container img{
+  width: 100%;
+}
+
+.card__title-container,
+.card__info {
+  padding: 24px;
+}
+
+.card__info {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+}
+
+.card__time {
+  background-color: var(--color-rocket);
+  filter: brightness(90%);
+  padding: 2px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+/* === MODAL === */
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modal {
+  width: 90%;
+  height: 90%;
+  background-color: white;
+  margin: 5vh auto;
+  position: relative;
+}
+
+.buttons-modal {
+  position: absolute;
+  color: black;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
+}
+
+.modal-content iframe {
+  width: 100%;
+  height: 90%;
+  position: absolute;
+  top: 5vh;
+}
+
+/* === Modal Active === */
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* === Modal FullScreen === */
+
+.modal.maximize {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.modal.maximize iframe {
+  height: 100%;
+}
