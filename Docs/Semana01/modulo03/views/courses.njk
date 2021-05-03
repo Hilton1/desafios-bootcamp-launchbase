@@ -11,44 +11,20 @@
   </div  >
 
   <section class="cards">
-    <div class="card" id="mapas-com-react-usando-leaflet">
-      <div class="card__image-container">
-        <img src="https://blog.rocketseat.com.br/content/images/2020/11/blog-thumb-utilizando-mapas-no-react-com-leaflet-1.jpg" alt="Imagem do curso">
+    {% for course in courses %}
+      <div class="card" id="{{course.id}}">
+        <div class="card__image-container">
+          <img src="{{course.image_url}}" alt="Imagem do post {{course.title}}">
+        </div>
+        <div class="card__title-container">
+          <p>{{course.title}}</p>
+        </div>
+        <div class="card__info">
+          <p>{{course.author}}</p>
+          <p class="card__time"><span class="material-icons md-14">timer</span>{{course.duration}}</p>
+        </div>
       </div>
-      <div class="card__title-container">
-        <p>Mapas com React Usando Leaflet</p>
-      </div>
-      <div class="card__info">
-        <p>Thiago Marinho</p>
-        <p class="card__time"><span class="material-icons md-14">timer</span>11 min</p>
-      </div>
-    </div>
-
-    <div class="card" id="construindo-um-app-com-mapas-usando-react-native-maps-e-mapbox">
-      <div class="card__image-container">
-        <img src="https://blog.rocketseat.com.br/content/images/2020/10/teste.jpg" alt="Imagem do curso">
-      </div>
-      <div class="card__title-container">
-        <p>Construindo App com Mapa usando React Native Maps e MapBox</p>
-      </div>
-      <div class="card__info">
-        <p>Thiago Marinho</p>
-        <p class="card__time"><span class="material-icons md-14">timer</span>8 min</p>
-      </div>
-    </div>
-
-    <div class="card" id="upload-de-imagens-no-front-end-com-react-js-e-context-api-3">
-      <div class="card__image-container">
-        <img src="https://blog.rocketseat.com.br/content/images/2020/09/upload-de-imagens-no-s3-da-aws-com-node-js.png" alt="Imagem do curso">
-      </div>
-      <div class="card__title-container">
-        <p>Upload de imagens no S3 da AWS com Node.js</p>
-      </div>
-      <div class="card__info">
-        <p>Thiago Marinho</p>
-        <p class="card__time"><span class="material-icons md-14">timer</span>17 min</p>
-      </div>
-    </div>
+    {% endfor %}
   </section>
   
   <div class="modal-overlay">

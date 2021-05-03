@@ -102,6 +102,7 @@ footer .links a {
 .card {
   background-color: var(--color-rocket);
   cursor: pointer;
+  display: grid;
 }
 
 .card__image-container img{
