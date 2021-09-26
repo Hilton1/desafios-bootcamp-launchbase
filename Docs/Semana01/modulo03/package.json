@@ -2,14 +2,23 @@
   "name": "modulo03",
   "version": "1.0.0",
   "description": "",
+<<<<<<< HEAD
   "main": "scripts.js",
+=======
+  "main": "server.js",
+>>>>>>> 71412f5285e2f47cdead986bae7c7b593e3b75ca
   "scripts": {
     "start": "nodemon server.js"
   },
   "author": "Hilton Ribeiro",
+<<<<<<< HEAD
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.12"
+=======
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+>>>>>>> 71412f5285e2f47cdead986bae7c7b593e3b75ca
   },
   "dependencies": {
     "express": "^4.17.1",
