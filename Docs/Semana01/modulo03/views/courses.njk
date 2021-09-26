@@ -1,7 +1,6 @@
 {% extends "layout.njk" %}
 
 {% block head %}
-<<<<<<< HEAD
   <title>Courses</title>
   <script src="/scripts.js" defer></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -30,45 +29,3 @@
     </div>
   </section>
 {% endblock content %}
-=======
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <title>Cursos</title>
-{% endblock %}
-
-{% block content %}
-  <div id="wrapper">
-    <h1>Conteúdos</h1>
-  </div  >
-
-  <section class="cards">
-    {% for course in courses %}
-      <div class="card" id="{{course.id}}">
-        <div class="card__image-container">
-          <img src="{{course.image_url}}" alt="Imagem do post {{course.title}}">
-        </div>
-        <div class="card__title-container">
-          <p>{{course.title}}</p>
-        </div>
-        <div class="card__info">
-          <p>{{course.author}}</p>
-          <p class="card__time"><span class="material-icons md-14">timer</span>{{course.duration}}</p>
-        </div>
-      </div>
-    {% endfor %}
-  </section>
-  
-  <div class="modal-overlay">
-    <div class="modal">
-      <div class="buttons-modal">
-        <span class="material-icons maximize">open_in_full</span>
-        <span class="material-icons close-modal">close</span>
-      </div>
-      <div class="modal-content">
-        <iframe src="" frameborder="0"></iframe>
-      </div>
-    </div>
-  </div>
-
-  <script src="scripts.js"></script>
-{% endblock %}
->>>>>>> 71412f5285e2f47cdead986bae7c7b593e3b75ca
