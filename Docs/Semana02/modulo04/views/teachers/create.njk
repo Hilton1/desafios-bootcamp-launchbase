@@ -1,0 +1,83 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+  <title>Teachers</title>
+{% endblock head %}
+
+{% block content %}
+  <form class="card" action="/teachers" method="POST">
+    <section class="avatar"></section>
+    <section class="details">
+      <h3>Detalhes</h3>
+      <div class="item">
+        <div>Avatar URL</div>
+        <div>
+          <input 
+            type="url" 
+            name="avatar_url" 
+            placeholder="http://"
+            required
+          >
+        </div>
+      </div>
+
+      <div class="item">
+        <div>Nome Completo</div>
+        <div>
+          <input 
+            type="text" 
+            name="name" 
+            placeholder="José da Silva"
+            required
+          >
+        </div>
+      </div>
+
+      <div class="item">
+        <div>Data de Nascimento</div>
+        <div>
+          <input
+            type="date" 
+            name="birth"
+            required
+          >
+        </div>
+      </div>
+
+      <div class="item">
+        <div>Grau de Escolaridade</div>
+        <div>
+          <select name="schooling" required>
+            <option value="" selected disabled>Selecione um item</option>
+            <option value="Ensino Médio Completo">Ensino Médio Completo</option>
+            <option value="supeEnsino Superior Completorior">Ensino Superior Completo</option>
+            <option value="Mestrado">Mestrado</option>
+            <option value="Doutorado">Doutorado</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="item">
+        <div>Tipo de Aula</div>
+        <div>
+          <span><input type="radio" name="classType" id="" value="Presencial" checked>Presencial</span>
+          <span><input type="radio" name="classType" id="" value="À Distância">À Distância</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div>Área de Atuação</div>
+        <div>
+          <input 
+            type="text" 
+            name="matter"
+            placeholder="Português, Matemática..."
+            required
+          >
+        </div>
+      </div>
+
+      <button type="submit">Enviar</button>
+    </section>
+  </form>
+{% endblock content %}
