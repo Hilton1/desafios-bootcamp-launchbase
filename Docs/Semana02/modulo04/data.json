@@ -1,5 +1,14 @@
 {
   "teachers": [
-    
+    {
+      "id": 1,
+      "avatar_url": "https://upload.wikimedia.org/wikipedia/commons/8/83/Bra-Cos_%281%29_%28cropped%29.jpg",
+      "name": "Adulto Ney",
+      "birth": 697248000000,
+      "schooling": "Ensino Médio Completo",
+      "classType": "Presencial",
+      "matters": "Arte de driblar, metele gole",
+      "created_at": 1634430348916
+    }
   ]
 }

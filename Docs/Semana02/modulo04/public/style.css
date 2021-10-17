@@ -82,10 +82,6 @@ body {
   }
 }
 
-.avatar {
-  background: url(https://source.unsplash.com/collection/8491653/500x500) no-repeat center center / cover ;
-}
-
 .details {
   padding: 32px;
 }
