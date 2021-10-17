@@ -1,0 +1,116 @@
+<div class="item">
+  <div>Avatar URL</div>
+  <div>
+    <input 
+      type="url" 
+      name="avatar_url" 
+      placeholder="http://"
+      value = "{{teacher.avatar_url}}"
+      required
+    >
+  </div>
+</div>
+
+<div class="item">
+  <div>Nome Completo</div>
+  <div>
+    <input 
+      type="text" 
+      name="name" 
+      placeholder="José da Silva"
+      value = "{{teacher.name}}"
+      required
+    >
+  </div>
+</div>
+
+<div class="item">
+  <div>Data de Nascimento</div>
+  <div>
+    <input
+      type="date" 
+      name="birth"
+      value="{{teacher.birth}}"
+      required
+    >
+  </div>
+</div>
+
+<div class="item">
+  <div>Grau de Escolaridade</div>
+  <div>
+    <select name="schooling" required>
+      <option value="" selected disabled>Selecione um item</option>
+      <option 
+        value="medio" 
+        {% if teacher.schooling == 'medio'%}
+          selected
+        {% endif %}
+        >Ensino Médio Completo
+      </option>
+      <option 
+        value="superior"
+        {% if teacher.schooling == 'superior'%}
+          selected
+        {% endif %}
+        >Ensino Superior Completo
+      </option>
+      <option 
+        value="mestrado"
+        {% if teacher.schooling == 'mestrado'%}
+          selected
+        {% endif %}
+        >Mestrado
+      </option>
+      <option 
+        value="doutorado"
+        {% if teacher.schooling == 'doutorado'%}
+          selected
+        {% endif %}
+        >Doutorado
+      </option>
+    </select>
+  </div>
+</div>
+
+<div class="item">
+  <div>Tipo de Aula</div>
+  <div>
+    <span>
+      <input 
+      type="radio" 
+      name="classType" 
+      value="presencial" 
+      checked
+      {% if teacher.classType == 'presencial' %}
+        checked
+      {% endif %}
+      >Presencial
+    </span>
+    <span>
+      <input 
+      type="radio" 
+      name="classType" 
+      value="distancia"
+      {% if teacher.classType == 'Distancia' %}
+        checked
+      {% endif %}
+      >À Distância
+    </span>
+  </div>
+</div>
+
+<div class="item">
+  <div>Área de Atuação</div>
+  <div>
+    <input 
+      type="text" 
+      name="matters"
+      placeholder="Português, Matemática..."
+      value = "{{teacher.matters}}"
+      required
+    >
+  </div>
+</div>
+
+<button type="submit">Enviar</button>

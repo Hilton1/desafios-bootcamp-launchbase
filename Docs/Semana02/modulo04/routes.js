@@ -18,6 +18,8 @@ routes.get('/teachers/:id', teachers.show);
 
 routes.post('/teachers', teachers.post);
 
+routes.get('/teachers/:id/edit', teachers.edit);
+
 routes.get('/students', (req, res) => {
   return res.send('Students');
 });
